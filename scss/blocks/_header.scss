@@ -1,0 +1,15 @@
+.header {
+  background-color: $darker-blue;
+}
+
+.header__inner {
+  margin: 74px 0;
+  @include flex(center, space-between);
+}
+
+@include breakpoint-down(510px) {
+  .header__inner {
+    margin-top: 24px;
+    margin-bottom: 45px;
+  }
+}

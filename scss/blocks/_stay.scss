@@ -1,0 +1,97 @@
+.stay__inner {
+  @include flex(center, space-between);
+  margin-bottom: 90px;
+}
+
+.stay__img {
+  width: 615px;
+  height: 464px;
+}
+
+.stay__content {
+  max-width: 490px;
+}
+
+.stay__heading {
+  margin-bottom: 19px;
+  font-size: 40px;
+  line-height: 50px;
+  color: $white;
+}
+
+.stay__text {
+  margin-bottom: 16px;
+  font-family: "OpenSans";
+  font-size: 16px;
+  line-height: 24px;
+  color: $white;
+}
+
+.stay__link {
+  margin-top: 8px;
+  font-family: "OpenSans";
+  @include linkStyle(none, 16px, 19px, $dark-green);
+  border-bottom: 2px solid $dark-green;
+  padding-bottom: 3px;
+  &::after {
+    display: inline-block;
+    width: 14px;
+    height: 16px;
+    background-image: url("../../img/direction-sign.png");
+    background-repeat: no-repeat;
+    background-size: 14px 16px;
+    content: "";
+  }
+}
+
+@include breakpoint-down(1020px) {
+  .stay__img {
+    width: 512px;
+    height: 386px;
+  }
+}
+
+@include breakpoint-down(890px) {
+  .stay__img {
+    width: 460px;
+    height: 347px;
+  }
+  
+  .stay__heading {
+    margin-bottom: 16px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+@include breakpoint-down(820px) {
+  .stay__inner {
+    flex-direction: column;
+  }
+  
+  .stay__content {
+    max-width: 760px;
+  }
+  
+  .stay__heading {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
+
+@include breakpoint-down(510px) {
+  .stay__img {    
+    width: 304px;
+    height: 230px;
+  }
+  
+  .stay__heading {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  
+  .stay__text {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}

@@ -1,0 +1,30 @@
+.nav__list {
+  @include flex(center, space-between);
+  @include list-nostyle;
+}
+
+.nav__item ~ .nav__item {
+  margin-left: 57px;
+}
+
+.nav__link {
+  @include linkStyle(none, 16px, 19px, $white);
+  transition: all 0.5s ease;
+  &:hover {
+    @include linkStyle(underline, 16px, 19px, $light-yellow);
+  }
+}
+
+@include breakpoint-down(510px) {
+  .nav__item ~ .nav__item {
+    margin-left: 24px;
+  }
+  
+  .nav__link {
+    @include linkStyle(none, 12px, 14px, $white);
+    transition: all 0.5s ease;
+    &:hover {
+      @include linkStyle(underline, 12px, 14px, $light-yellow);
+    }
+  }
+}

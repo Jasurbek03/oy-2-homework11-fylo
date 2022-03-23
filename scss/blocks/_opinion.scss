@@ -1,0 +1,133 @@
+.opinion__inner {
+  max-width: 1180px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+  padding-top: 36px;
+  padding-left: 20px;
+  background-image: url("../../img/quotation-marks.png");
+  background-repeat: no-repeat;
+  background-size: 55px 44px;
+  background-position: calc(50% - 554px) - 0px;
+}
+
+.opinion__list {
+  @include flex(center, space-between);
+  @include list-nostyle;
+}
+
+.opinion__item {
+  background-color: $darker-blue;
+  border-radius: 5px;
+  max-width: 360px;
+  padding: 40px 25px 25px 25px;
+  transition: transform 0.5s ease;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.opinion__quote {
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  color: $white;
+}
+
+.opinion__userbox {
+  max-width: 120px;
+  @include flex(center, space-between);
+}
+
+.opinion__user-img {
+  width: 24px;
+  height: 24px;
+}
+
+.opinion__username {
+  font-size: 10px;
+  line-height: 12px;
+  color: $white;
+  letter-spacing: 0.5px;
+}
+
+.opinion__userposition {
+  display: block;
+  font-size: 7px;
+  line-height: 10px;
+  letter-spacing: 0.5px;
+  color: $white;
+}
+
+@include breakpoint-down(1150px) {
+  .opinion__inner {
+    background-position: calc(50% - 464px) - 0px;
+    max-width: 1000px;
+  }
+  
+  .opinion__item {
+    max-width: 320px;
+  }
+}
+
+@include breakpoint-down(1050px) {
+  .opinion__inner {
+    background-position: calc(50% - 464px) - 0px;
+  }
+  
+  .opinion__item {
+    max-width: 300px;
+  }
+}
+
+@include breakpoint-down(977px) {
+  .opinion__inner {
+    background-position: calc(50% - 424px) - 0px;
+  }
+  
+  .opinion__item {
+    max-width: 280px;
+  }
+}
+
+@include breakpoint-down(917px) {
+  .opinion__inner {
+    background-image: none;
+  }
+  
+  .opinion__list {
+    padding-top: 37px;
+    background-image: url("../../img/quotation-marks.png");
+    background-repeat: no-repeat;
+    background-size: 55px 44px;
+    background-position: calc(50% - 284px) - 0px;
+    flex-direction: column;
+  }
+  
+  .opinion__item {
+    max-width: 700px;
+  }
+  
+  .opinion__item ~ .opinion__item {
+    margin-top: 24px;
+  }
+}
+
+@include breakpoint-down(670px) {
+  .opinion__list {
+    background-position: calc(50% - 220px) - 0px;
+  }
+}
+
+@include breakpoint-down(510px) {
+  .opinion__list {
+    background-position: calc(50% - 110px) - 0px;
+  }
+  
+  .opinion__quote {
+    margin-bottom: 17px;
+    font-size: 10px;
+    line-height: 18px;
+  }
+}

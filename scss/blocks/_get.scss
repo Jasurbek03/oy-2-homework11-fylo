@@ -1,0 +1,87 @@
+.get__inner {
+  max-width: 863px;
+  background-color: $darker-blue;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 41px 20px;
+  @include flex(center, space-between);
+  flex-direction: column;
+  text-align: center;
+  transform: translateY(112px);
+}
+
+.get__heading {
+  margin-bottom: 16px;
+  font-size: 32px;
+  line-height: 48px;
+  color: $white;
+}
+
+.get__text {
+  margin-bottom: 38px;
+  max-width: 590px;
+  font-family: "OpenSans";
+  font-size: 14px;
+  line-height: 21px;
+  color: $white;
+}
+
+.get__input {
+  margin-right: 39px;
+  padding: 17px 208px 15px 38px;
+  font-family: "OpenSans";
+  font-size: 12px;
+  line-height: 14px;
+  color: $gray;
+  border: none;
+  background-color: $white;
+  border-radius: 24px;
+}
+
+.get__btn {
+  padding: 15px 26px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: capitalize;
+  color: $white;
+  border: none;
+  background-color: $light-blue;
+  border-radius: 24px;
+}
+
+@include breakpoint-down(694px) {
+  .get__heading {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  
+  .get__input {
+    display: block;
+    margin: 0;
+    margin-bottom: 24px;
+  }
+  
+  .get__btn {
+    padding: 15px 0px;
+    min-width: 385px;
+  }
+}
+
+@include breakpoint-down(510px) {
+  .get__heading {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  
+  .get__input {
+    padding: 16px 0px;
+    padding-left: 30px;
+    min-width: 280px;
+  }
+  
+  .get__btn {
+    padding: 15px 0px;
+    min-width: 280px;
+  }
+}

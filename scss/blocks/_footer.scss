@@ -1,0 +1,219 @@
+.footer {
+  background-color: $very-dark-blue;
+}
+
+.footer__inner {
+  margin-bottom: 100px;
+  padding-top: 200px;
+  @include flex(flex-start, space-between);
+}
+
+.footer__logo {
+  margin-bottom: 32px;
+}
+
+.footer__location {
+  @include flex(flex-start, space-between);
+  max-width: 379px;
+  padding-right: 20px;
+}
+
+.footer__location-img {
+  width: 13px;
+  height: 18px;
+}
+
+.footer__location-text {
+  margin-left: 27px;
+  max-width: 339px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $white;
+}
+
+.footer__communication {
+  margin-top: 90px;
+  max-width: 171px;
+}
+
+.footer__communication-tel {
+  margin-bottom: 16px;
+  @include flex(center, flex-start);
+  font-family: "OpenSans";
+  @include linkStyle(none, 14px, 21px, $white);
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s ease;
+  &:hover {
+    color: $light-yellow;
+    border-bottom: 1px solid $light-yellow;
+  }
+}
+
+.footer__communication-tel-img {
+  margin-right: 23px;
+  width: 24px;
+  height: 24px;
+}
+
+.footer__communication-email {
+  @include flex(center, flex-start);
+  font-family: "OpenSans";
+  @include linkStyle(none, 14px, 21px, $white);
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s ease;
+  &:hover {
+    color: $light-yellow;
+    border-bottom: 1px solid $light-yellow;
+  }
+}
+
+.footer__communication-email-img {
+  margin-right: 23px;
+  width: 24px;
+  height: 24px;
+}
+
+.footer__about {
+  margin-top: 90px;
+}
+
+.footer__about-list {
+  @include list-nostyle;
+}
+
+.footer__about-item ~ .footer__about-item {
+  margin-top: 16px;
+}
+
+.footer__about-link {
+  display: inline-block;
+  @include linkStyle(none, 16px, 19px, $white);
+  font-family: "OpenSans";
+  transition: all 0.5s ease;
+  &:hover {
+    transform: scale(1.5);
+    color: $light-yellow;
+  }
+}
+
+.footer__contact {
+  margin-top: 90px;
+}
+
+.footer__contact-list {
+  @include list-nostyle;
+}
+
+.footer__contact-item ~ .footer__contact-item {
+  margin-top: 16px;
+}
+
+.footer__contact-link {
+  display: inline-block;
+  @include linkStyle(none, 16px, 19px, $white);
+  font-family: "OpenSans";
+  transition: all 0.5s ease;
+  &:hover {
+    transform: scale(1.5);
+    color: $light-yellow;
+  }
+}
+
+.footer__socialmedia {
+  margin-top: 90px;
+}
+
+.footer__socialmedia-list {
+  max-width: 120px;
+  @include list-nostyle;
+  @include flex(center, space-between);
+}
+
+.footer__socialmedia-item ~ .footer__socialmedia-item {
+  margin-left: 11px;
+}
+
+.footer__socialmedia-link {
+  display: inline-block;
+  &:hover .footer__socialmedia-img {
+    transform: scale(1.2);
+  }
+}
+
+.footer__socialmedia-img {
+  display: block;
+  width: 33px;
+  height: 31px;
+  transition: transform 0.5s ease;
+}
+
+@include breakpoint-down(970px) {
+  .footer__location {
+    max-width: 300px;
+  }
+}
+
+@include breakpoint-down(850px) {
+  .footer__inner {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+  
+  .footer__location {
+    max-width: 480px;
+  }
+  
+  .footer__communication {
+    max-width: 250px;
+    margin-right: 150px;
+  }
+  
+  .footer__about {
+    max-width: 250px;
+    margin-top: 30px;
+    margin-right: 150px;
+  }
+  
+  .footer__contact {
+    margin-right: 150px;
+    margin-top: 30px;
+  }
+  
+  .footer__socialmedia{
+    margin-top: 30px;
+  }
+}
+
+@include breakpoint-down(810px) {
+  .footer__communication {
+    margin-right: 50px;
+  }
+}
+
+@include breakpoint-down(710px) {
+  .footer__inner {
+    flex-direction: column;
+  }
+  
+  .footer__logolocation {
+    margin-bottom: 30px;
+  }
+  
+  .footer__communication {
+    margin: 0;
+    margin-bottom: 80px;
+  }
+  
+  .footer__about {
+    margin-bottom: 50px;
+  }
+  
+  .footer__contact {
+    margin-bottom: 80px;
+  }
+  
+  .footer__socialmedia {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
