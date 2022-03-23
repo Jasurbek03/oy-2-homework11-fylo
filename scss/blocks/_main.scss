@@ -8,14 +8,20 @@
 
 @include breakpoint-down(770px) {
   .main {
-    background-size: 800px 2771px;
+    background-size: 800px 2810px;
     background-position: calc(50% - -20px) 280px;
+  }
+}
+
+@include breakpoint-down(690px) {
+  .main {
+    background-size: 800px 3500px;
   }
 }
 
 @include breakpoint-down(560px) {
   .main {
-    background-size: 650px 2771px;
+    background-size: 650px 3460px;
     background-position: calc(50% - 20px) 170px;
   }
 }

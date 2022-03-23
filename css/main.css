@@ -548,14 +548,20 @@ button {
 
 @media only screen and (max-width: 770px) {
   .main {
-    background-size: 800px 2771px;
+    background-size: 800px 2810px;
     background-position: calc(50% - -20px) 280px;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  .main {
+    background-size: 800px 3500px;
   }
 }
 
 @media only screen and (max-width: 560px) {
   .main {
-    background-size: 650px 2771px;
+    background-size: 650px 3460px;
     background-position: calc(50% - 20px) 170px;
   }
 }
@@ -1010,6 +1016,7 @@ button {
 .get__inner {
   max-width: 863px;
   background-color: #1b2330;
+  border-radius: 10px;
   margin-right: auto;
   margin-left: auto;
   padding: 41px 20px;
@@ -1071,7 +1078,11 @@ button {
   border-radius: 24px;
 }
 
-@media only screen and (max-width: 694px) {
+@media only screen and (max-width: 700px) {
+  .get__inner {
+    -webkit-transform: translateY(168px);
+            transform: translateY(168px);
+  }
   .get__heading {
     font-size: 24px;
     line-height: 36px;
